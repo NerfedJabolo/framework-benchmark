@@ -1,0 +1,7 @@
+Stric x 108736 req/sec
+Vix x 105962 req/sec
+Elysia x 105927 req/sec
+Hono x 87965 req/sec
+Bunicorn x 86952 req/sec
+
+Fastest is Stric.
