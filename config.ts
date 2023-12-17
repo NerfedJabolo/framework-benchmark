@@ -1,4 +1,5 @@
 import body from 'body.json';
+import body2 from 'body2.json';
 import { Config } from 'lib/types';
 import { randomString, randomNum } from 'lib/utils/config';
 
@@ -57,14 +58,14 @@ export default {
     {
       path: '/api/hash',
       method: 'POST',
-      body: JSON.stringify({ a: 'value1', b: 'value2' }), // Example values for 'a' and 'b'
+      bodyFile: `${rootDir}/assets/body2.json`, // Example values for 'a' and 'b'
       headers: {
         'Content-Type': 'application/json',
       },
       expect: {
         // The expected response should be the hash of 'value1value2'
         // Replace 'expectedHash' with the actual expected hash value
-        body: 'value1value2',
+        body: JSON.stringify(body2),
       },
       description:
         'Should return the hash of concatenated values of `a` and `b`.',

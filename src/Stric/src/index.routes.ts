@@ -19,7 +19,7 @@ export default routes('/api')
   .get('/id/:id', (c) => text(`${c.params.id} ${getName(c)}`))
   .post('/json', (c) => c.json().then(json))
 
-  .post('/api/hash', async (c) => {
+  .post('/hash', async (c) => {
     const body = await parseJSON(c);
 
     return body === null
